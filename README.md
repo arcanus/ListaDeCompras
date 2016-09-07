@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Orchestra PHP Framework
 ##Framework Propio en PHP
 Este proyecto es una iniciativa que nace desde la necesidad de profundizar en el estudio de php para así entender de una mejor manera cómo funcionan las cosas a un nivel de framework.
@@ -6,3 +7,7 @@ Motivado en lo antes mencionado, es que nace este proyecto de framework llamado 
 El proyecto es open source y persigue fines didácticos.
 
 Saludos Cordiales, Paulo Vazquez.
+=======
+# ListaDeCompras
+Proyecto de una lista de compras sencilla para probar el framework Orchestra
+>>>>>>> ec8d365ea93667bfff228fe49115aa90cff61bce
