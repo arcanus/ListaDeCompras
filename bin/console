@@ -1,0 +1,52 @@
+#!/usr/bin/php
+<?php
+
+  include (__DIR__ . "/../core/autoload.php");
+  //include ("../core/consoleFunctions.php");
+
+  echo shell_exec('clear');
+
+  switch ($argc)
+  {
+    case '1':
+      \core\console\consoleFunctions::mostrarMenu();
+      break;
+
+    case '2':
+      switch ($argv[1])
+      {
+        case 'create:entity':
+
+          $info_entity = \core\console\consoleFunctions::createEntityTable();
+
+          if($info_entity)
+          {
+            echo " -> Ahora vamos a crear el archivo de entidad.\n\n";
+            echo " -> Presione una tecla para continuar...";
+            fgets(STDIN);
+            \core\console\consoleFunctions::createEntity($info_entity['nombre'], $info_entity['campos']);
+            echo "\n -> Entidad creada correctamente.\n\n";
+          }
+
+        break;
+
+        case 'create:config':
+          \core\console\consoleFunctions::createConfig();
+        break;
+
+        case 'create:database':
+          \core\console\consoleFunctions::createDatabase();
+        break;
+
+        case 'check:config':
+          \core\console\consoleFunctions::checkConfig();
+        break;
+
+        default:
+          \core\console\consoleFunctions::mostrarMenu();
+        break;
+      }
+  }
+
+
+?>

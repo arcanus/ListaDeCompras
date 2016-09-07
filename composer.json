@@ -1,0 +1,31 @@
+{
+  "name": "agami/orchestra",
+  "type": "project",
+  "description": "PHP Framework",
+  "keywords": ["php","framework"],
+  "homepage": "https://github.com/arcanus/php_framework",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Paulo Vazquez",
+          "role": "Developer"
+      }
+    ],
+    "autoload": {
+        "psr-4": {
+          "core\\": "core/",
+          "core\\console\\": "core/console/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "lichtner/fluentpdo": "^1.1",
+        "twig/twig": "~1.0"
+    },
+    "scripts": {
+      "post-create-project-cmd": [
+        "core\\console\\consoleFunctions::clearConsole",
+        "core\\console\\consoleFunctions::createConfig"
+      ]
+    }
+}
