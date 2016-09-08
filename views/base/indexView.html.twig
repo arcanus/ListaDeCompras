@@ -2,7 +2,7 @@
 
 {% block body %}
 
-  <table class="table table-hover">
+  <table class="table table-hover table-condensed">
     <thead>
       <tr>
         <th>Artículo:</th>
@@ -19,14 +19,14 @@
         </tr>
       {% endfor %}
       <tr>
-
+        <form action="/base/insert/" id="formArticulo">
           <td>
-            <input type="text" class="form-control" placeholder="Ingrese in artículo" id="nombre">
+            <input type="text" class="form-control" placeholder="Ingrese in artículo" id="nombreArticulo">
           </td>
           <td>
             <button type="submit" class="btn btn-success">Agregar</button>
           </td>
-                  
+        </form>
       </tr>
     </tbody>
   </table>

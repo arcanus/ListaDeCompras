@@ -18,9 +18,14 @@
       header("Location: /");
     }
 
-    public function insertAction($articulo)
+    public function insertAction($params)
     {
-      die($articulo);
+      $articulo = new \entities\articulosEntity();
+
+      $articulo->setNombre($params[0]);
+
+      $articulo->insert();
+      
     }
 
   }
